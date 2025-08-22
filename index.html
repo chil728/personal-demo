@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <meta name="theme-color" content="#0f172a">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <title>Web Tech</title>
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+        <!-- Particles.js -->
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <!-- Typed.js -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    </head>
+    <body class="bg-slate-900 text-white">
+        <div id="particles-js"></div>
+        <!-- Navbar -->
+        <nav class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 border-b border-slate-700 backdrop-blur bg-slate-900/50">
+            <h1 class="text-2xl font-bold tracking-wider">
+                <a href="/">Web Tech</a>
+            </h1>
+            <button id="menu-btn" class="text-blue-400 text-2xl md:hidden focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="hidden md:flex gap-6 text-lg">
+                <li>
+                    <a href="index.html#tech" class="hover:text-blue-400 transition flex items-center">
+                        <i class="fas fa-code mr-1"></i>
+                        Tech Stack
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#contact" class="hover:text-blue-400 transition flex items-center">
+                        <i class="fas fa-envelope mr-1"></i>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="menu-container" class="fixed top-16 p-8 left-0 w-full h-[calc(100%-4rem)] bg-slate-900/90 backdrop-blur-lg hidden md:hidden flex-col items-center justify-center space-y-8 text-lg text-blue-300 z-40">
+            <a href="index.html#tech" class="hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-code mr-2"></i>
+                Tech Stack
+            </a>
+            <a href="index.html#contact" class="hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-envelope mr-2"></i>
+                Contact
+            </a>
+        </div>
+        <!-- Hero -->
+        <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20" data-aos="zoom-in">
+            <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                Hello World
+            </h2>
+            <p class="text-base sm:text-lg md:text-2xl text-slate-400 max-w-2xl mb-8">
+                I'm
+                <span id="typed-text"></span>
+            </p>
+            <a href="index.html#contact" class="px-6 sm:px-8 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg shadow-lg shadow-blue-500/50 transition-all">
+                <i class="fas fa-paper-plane mr-2"></i>
+                Contact Me
+            </a>
+        </section>
+        <!-- Tech Stack -->
+        <section id="tech" class="py-20 px-6 bg-slate-800" data-aos="fade-up">
+            <h3 class="text-3xl font-bold mb-10 text-center">My Tech Stack</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="p-6 bg-slate-900 rounded-lg hover:scale-105 hover:shadow-lg hover:shadow-orange-500/50 transition">
+                    <i class="fab fa-html5 text-5xl text-orange-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold">HTML5</h4>
+                    <p class="text-slate-400 text-sm mt-2">Semantic, accessible, SEO-friendly markup</p>
+                </div>
+                <div class="p-6 bg-slate-900 rounded-lg hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 transition">
+                    <i class="fab fa-css3-alt text-5xl text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold">CSS3</h4>
+                    <p class="text-slate-400 text-sm mt-2">Responsive layouts, animations, and effects</p>
+                </div>
+                <div class="p-6 bg-slate-900 rounded-lg hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/50 transition">
+                    <i class="fab fa-js-square text-5xl text-yellow-400 mb-4"></i>
+                    <h4 class="text-xl font-semibold">JavaScript</h4>
+                    <p class="text-slate-400 text-sm mt-2">Dynamic, interactive web experiences</p>
+                </div>
+                <div class="p-6 bg-slate-900 rounded-lg hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/50 transition">
+                    <i class="fas fa-wind text-5xl text-cyan-400 mb-4"></i>
+                    <h4 class="text-xl font-semibold">Tailwind CSS</h4>
+                    <p class="text-slate-400 text-sm mt-2">Utility-first CSS framework for rapid UI</p>
+                </div>
+                <div class="p-6 bg-slate-900 rounded-lg hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/50 transition">
+                    <i class="fab fa-react text-5xl text-cyan-400 mb-4"></i>
+                    <h4 class="text-xl font-semibold">React</h4>
+                    <p class="text-slate-400 text-sm mt-2">Component-based UI library</p>
+                </div>
+                <div class="p-6 bg-slate-900 rounded-lg hover:scale-105 hover:shadow-lg hover:shadow-gray-400/50 transition">
+                    <i class="fas fa-layer-group text-5xl text-gray-300 mb-4"></i>
+                    <h4 class="text-xl font-semibold">Next.js</h4>
+                    <p class="text-slate-400 text-sm mt-2">SSR, SSG, and API routes for React</p>
+                </div>
+                <div class="p-6 bg-slate-900 rounded-lg hover:scale-105 hover:shadow-lg hover:shadow-green-500/50 transition">
+                    <i class="fab fa-node-js text-5xl text-green-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold">Node.js</h4>
+                    <p class="text-slate-400 text-sm mt-2">JavaScript runtime for backend services</p>
+                </div>
+                <div class="p-6 bg-slate-900 rounded-lg hover:scale-105 hover:shadow-lg hover:shadow-purple-400/50 transition">
+                    <i class="fab fa-php text-5xl text-purple-400 mb-4"></i>
+                    <h4 class="text-xl font-semibold">PHP</h4>
+                    <p class="text-slate-400 text-sm mt-2">Server-side scripting for dynamic web apps</p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact -->
+        <section id="contact" class="py-20 px-6" data-aos="fade-up">
+            <h3 class="text-3xl font-bold mb-6 text-center">Contact Me</h3>
+            <p class="text-slate-400 mb-8 text-center max-w-xl mx-auto">
+                Let’s collaborate on your next big idea. Fill out the form below and I’ll get back to you soon.
+            </p>
+            <form action="https://formspree.io/f/xeozyjar" method="POST" class="max-w-2xl mx-auto bg-slate-900 p-8 rounded-lg shadow-lg shadow-blue-500/30 space-y-6">
+                <!-- Name -->
+                <div>
+                    <label for="name" class="block text-left text-slate-300 mb-2">Name</label>
+                    <div class="flex items-center bg-slate-800 border border-slate-700 rounded-lg 
+                    group transition-all hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/50 
+                    focus-within:border-blue-500 focus-within:shadow-lg focus-within:shadow-blue-500/50">
+                        <span class="px-3 text-blue-400">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            class="w-full px-4 py-3 bg-slate-800 text-white focus:outline-none rounded-r-lg"
+                        >
+                    </div>
+                </div>
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-left text-slate-300 mb-2">Email</label>
+                    <div class="flex items-center bg-slate-800 border border-slate-700 rounded-lg 
+                    group transition-all hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/50 
+                    focus-within:border-blue-500 focus-within:shadow-lg focus-within:shadow-blue-500/50">
+                        <span class="px-3 text-blue-400">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <input
+                            type="email"
+                            id="email"
+                            name="_replyto"
+                            required
+                            class="w-full px-4 py-3 bg-slate-800 text-white focus:outline-none rounded-r-lg"
+                        >
+                    </div>
+                </div>
+                <!-- Message -->
+                <div>
+                    <label for="message" class="block text-left text-slate-300 mb-2">Message</label>
+                    <div class="flex items-start bg-slate-800 border border-slate-700 rounded-lg 
+                    group transition-all hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/50 
+                    focus-within:border-blue-500 focus-within:shadow-lg focus-within:shadow-blue-500/50">
+                        <span class="px-3 pt-3 text-blue-400">
+                            <i class="fas fa-comment-dots"></i>
+                        </span>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="3"
+                            style="resize: none;"
+                            required
+                            class="w-full px-4 py-3 bg-slate-800 text-white focus:outline-none rounded-r-lg"
+                        ></textarea>
+                    </div>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="w-full px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg shadow-lg shadow-blue-500/50 
+                   transition-all font-semibold flex items-center justify-center">
+                    <i class="fas fa-paper-plane mr-2"></i>
+                    Send Message
+                </button>
+            </form>
+        </section>
+        <!-- Footer -->
+        <footer class="text-center py-6 border-t border-slate-700 text-slate-500 text-sm">
+            © 2025 Tom. All rights reserved.
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
